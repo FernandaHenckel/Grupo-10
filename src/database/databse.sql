@@ -13,6 +13,17 @@ cartao_postal varchar(40) not null,
 primary key (id_endereco)
 );
 
+create table contato (
+id_contato int auto_increment,
+nome_contato varchar(100),
+telefone varchar(15),
+email_contato varchar(200),
+fk_empresa int,
+primary key (id_contato),
+foreign key (fk_empresa)
+references empresa(id_empresa) 
+);
+
 
 create table empresa (
 id_empresa int auto_increment,
@@ -35,4 +46,4 @@ foreign key (fk_empresa) references empresa(id_empresa),
 unique (email)
 );
 
-select*from usuarios;
+update usuarios set senha = {NovaSenha} where id_usuario = {ID_USUARIO};

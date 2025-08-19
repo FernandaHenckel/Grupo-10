@@ -15,12 +15,241 @@
     background-color: #FFE760;
 }
 #nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
+    border-radius: 40px;
+    width: 3vw;
+    height: 3vh;
 
     color: black;
     font-weight: 600;
+    transition: 0.2s ease-in-out;
 }
+#nav li p {
+    margin: 0;
+}
+#nav a:hover {
+    background-color: hsl(51, 100%, 39%);
+    width: 4.5vw;
+    height: 4.5vh;
+
+}
+
 .banner {
-    height: 100vh;
-    background-image: url("assets/imgs/banner.png");
+    height: 86vh;
+    background-image: url("../assets/imgs/banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner .title {
+    position: relative;
+    top: 15vh;
+    width: 50%;
+    margin-left: 5vw;
+    
+
+    font-size: 96px;
+    font-weight: 800;
+    background: linear-gradient(to bottom, #f5f5f5, #cccbcb);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.banner .sub-title {
+    position: relative;
+    top: 15vh;
+    width: 40%;
+    margin-left: 5vw;
+
+    color: white;
+    font-size: 24px;
+}
+.banner .saiba-mais button{
+    position: relative;
+    top: 15vh;
+    width: 20vw;
+    height: 10vh;
+    border: 0;
+    border-radius: 40px;
+    margin-left: 5vw;
+
+    background-color: #FFE760;
+    font-weight: 800;
+    font-size: 24px;
+    color: #5E4E4E;
+    cursor: pointer;
+    transition: 0.35s ease-in-out;
+}
+
+.banner .saiba-mais button:hover {
+    background-color: hsl(51, 100%, 49%);
+    top: 14vh;
+}
+
+.banner .saiba-mais button:active {
+    top: 15vh;
+    background-color: #FFE760;
+}
+
+/* CONTEINER BOX */
+
+.conteiner-box {
+    display: flex;
+    justify-content: space-around;
+}
+.box1,.box2,.box3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    
+    position: relative;
+    top: 20vh;
+    border: 1px solid black;
+    border-radius: 40px;
+    width: 20vw;
+    height: 50vh;
+}
+
+.conteiner-box h2{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.box1 img,.box2 img,.box3 img{
+    position: relative;
+    top: -6vh;
+    width: 10vw;
+    height: 17vh;
+}
+
+.box1 p{
+    position: relative;
+    top: 4vh;
+    width: 40%;
+
+    font-size: 16px;
+}
+
+.box2 p,.box3 p {
+    position: relative;
+    top: 4vh;
+    width: 50%;
+
+    font-size: 16px;
+}
+
+/* COMO FUNCIONA */
+
+.como-funciona {
+    display: flex;
+    margin-left: 5vw;
+    margin-top: 50vh;
+    justify-content: space-around;
+}
+
+.text {
+    width: 35%;
+}
+
+.como-funciona h2 {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.como-funciona p {
+    font-size: 20px;
+    margin-top: 4vh;
+}
+
+/* QUEM SOMOS */
+
+.quem-somos {
+    display: flex;
+    margin-top: 25vh;
+    justify-content:space-around;
+    align-items: center;
+    background-color: #FFEC82;
+    height: 70vh;
+}
+.quem-somos img{
+    position: relative;
+    top: -30vh;
+}
+
+.quem-somos .text {
+    position: relative;
+    width: 40%;
+}
+.quem-somos .text h2 {
+    font-weight: 800;
+    margin-bottom: 8vh;
+    font-size: 24px;
+    text-align: end;
+}
+.quem-somos .text p {
+    font-size: 24px;
+    text-align: end;
+    color: black;
+}
+.circle {
+    position: relative;
+    top: 20vh;
+    background-color: hsla(51, 100%, 87%, 0.50);
+    border-radius: 50%;
+    height: 60vh;
+}
+
+/* ponto */
+
+.pontos {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20vh;
+}
+
+.ponto1,.ponto2,.ponto3,.ponto4 {
+    background-color: #FFE760;
+    border-radius: 50%;
+    width: 1vw;
+    height: 1.75vh;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 45vh;
+    margin-top: 20vh;
+}
+.footer ul {
+    margin-top: 5vh;
+    color: #FFE760;
+    font-weight: 800;
+    width: 100%;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style: none;
+}
+.footer .sobre {
+    display: flex;
+    flex-direction: column;
+}
+.footer a {
+    text-decoration: none;
+    color: #FFE760;
+}
+.footer .direitos {
+    display: flex;
+    margin-top: 15vh;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 32px
 }

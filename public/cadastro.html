@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>PayMetrics | Cadastro</title>
 </head>
 <body>
-    <div class="conteiner">
-        <div class="banner">
+    <div class="navbar navbar-inverse">
+        <div class="container-fluid">
             <ul id="nav">
                 <li>
                     <p>PayMetrics</p>
@@ -24,19 +25,38 @@
                 </li>
             </ul>
         </div>
-        <div class="conteiner-box">
-            <div class="box">
-                <p>Cadastro</p>
-                <div class="campos">
-                    <input id="ipt_nome" type="text" placeholder="nome">
-                    <input id="ipt_email" type="email" placeholder="exemplo@email.com">
-                    <input id="ipt_email_confirm" type="text" placeholder="Confirme o seu email">
-                    <input id="ipt_senha" type="password" placeholder="Insira sua senha...">
-                    <input id="ipt_senha_confirm" type="password" placeholder="Confirme sua senha...">
-                    <input id="ipt_admin" type="checkbox" placeholder="CNPJ da empresa">
+        <div class="flex-grow-1 d-flex justify-content-center align-items-center">
+            <div class="row shadow p-4">
+                <div class="col-sm-6 bg-light center">
+                    <img src="assets/imgs/CRUDimage.png" alt="PayMetrics Logo" class="img-fluid">
+                </div>
+
+                <div class="col-sm-6" >
+                    <h3 class="text-center mb-4">Cadastro</h3>
+                    <form>
+                        <div class="mb-3">
+                            <input id="ipt_nome" type="text" class="form-control" placeholder="Nome">
+                        </div>
+                        <div class="mb-3">
+                            <input id="ipt_email" type="email" class="form-control" placeholder="exemplo@email.com">
+                        </div>
+                        <div class="mb-3">
+                            <input id="ipt_email_confirm" type="text" class="form-control" placeholder="Confirme o seu email">
+                        </div>
+                        <div class="mb-3">
+                            <input id="ipt_senha" type="password" class="form-control" placeholder="Insira sua senha...">
+                        </div>
+                        <div class="mb-3">
+                            <input id="ipt_senha_confirm" type="password" class="form-control" placeholder="Confirme sua senha...">
+                        </div>
+                        <div class="form-check mb-3">
+                            <input id="ipt_admin" type="checkbox" class="form-check-input">
+                            <label class="form-check-label" for="ipt_admin">Usuário administrador</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+                    </form>
                 </div>
             </div>
-            <div class="box2"></div>
         </div>
     </div>
 </body>

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>PayMetrics | Login</title>
 </head>
 <body>
-    <div class="conteiner">
+    <div class="conteiner-fluid">
         <div class="banner">
             <ul id="nav">
                 <li>
@@ -28,12 +29,17 @@
             <div class="box">
                 <p>Login</p>
                 <div class="campos">
-                    <input id="ipt_email" type="email" placeholder="Insira seu email...">
-                    <input id="ipt_senha" type="password" placeholder="Insira sua senha...">
+                    <div class="col-6">
+                        <input id="ipt_email" type="email" placeholder="Insira seu email...">
+                    </div>
+                    <div class="col-6">
+                        <input id="ipt_senha" type="password" placeholder="Insira sua senha...">
+                    </div>
                 </div>
             </div>
             <div class="box2"></div>
         </div>
     </div>
 </body>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </html>

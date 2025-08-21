@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>PayMetrics | Cadastro</title>
 </head>
-<body>
-    <div class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <ul id="nav">
-                <li>
-                    <p>PayMetrics</p>
-                </li>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="">Sobre</a>
-                </li>
-                <li>
-                    <a href="">Login</a>
-                </li>
-            </ul>
-        </div>
-        <div class="flex-grow-1 d-flex justify-content-center align-items-center">
-            <div class="row shadow p-4">
-                <div class="col-sm-6 bg-light center">
-                    <img src="assets/imgs/CRUDimage.png" alt="PayMetrics Logo" class="img-fluid">
-                </div>
 
-                <div class="col-sm-6" >
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <div class="banner">
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <a class="navbar-brand">PayMetrics</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Conteúdo centralizado -->
+    <div class="flex-grow-1 d-flex justify-content-center align-items-center">
+        <div class="p-4 shadow w-100 row w-100 justify-content-center align-items-center" style="max-width: 900px;">
+            <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center">
+                <img src="assets/imgs/CRUDimage.png" alt="Banner" class="img-fluid" style="max-height: 400px; max-width: 100%; object-fit: contain;">
+            </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <div class="" style="max-width: 400px;">
                     <h3 class="text-center mb-4">Cadastro</h3>
                     <form>
                         <div class="mb-3">
@@ -60,4 +65,5 @@
         </div>
     </div>
 </body>
+
 </html>

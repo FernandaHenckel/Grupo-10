@@ -19,23 +19,9 @@ body {
     background-color: #FFE760;
     padding: 0px;
 }
-#nav a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    border-radius: 40px;
-    width: 3dvw;
-    height: 3dvh;
 
-    color: black;
-    font-weight: 600;
-    transition: 0.2s ease-in-out;
-}
-#nav li p {
-    margin: 0;
-}
-#nav a:hover {
+
+.navbar-brand a:hover {
     background-color: hsl(51, 100%, 39%);
     width: 4.5dvw;
     height: 4.5dvh;

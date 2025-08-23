@@ -13,7 +13,8 @@ function alterar() {
                 "Content-Type": "application/json",
                 body: JSON.stringify({
                     senha: senhaVar,
-                    nova: novaSenhaVar
+                    nova: novaSenhaVar,
+                    IdUsuario: IdUsuario
                 }),
             },
         }).then(function (resposta) {

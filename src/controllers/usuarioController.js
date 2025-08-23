@@ -84,6 +84,7 @@ function renovar(req, res) {
 
     var senha = req.body.senhaServer;
     var novaSenha = req.body.novaSenhaServer;
+    var IdUsuario = req.body.IdUsuario;
 
     // Faça as validações dos valores
     if (senha == undefined) {
@@ -91,7 +92,7 @@ function renovar(req, res) {
     }else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.renovar(senha)
+        usuarioModel.renovar(senha, novaSenha, IdUsuario)
             .then(
                 function (resultado) {
                     res.json(resultado);

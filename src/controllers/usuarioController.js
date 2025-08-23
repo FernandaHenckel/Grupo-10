@@ -83,6 +83,7 @@ function renovar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
 
     var senha = req.body.senhaServer;
+    var novaSenha = req.body.novaSenhaServer;
 
     // Faça as validações dos valores
     if (senha == undefined) {

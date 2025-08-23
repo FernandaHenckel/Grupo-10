@@ -19,10 +19,10 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                      <a class="nav-link" href="">Sobre</a>                    
+                    <a class="nav-link" href="">Sobre</a>
                 </li>
                 <li class="nav-item">
-                   
+
                 </li>
             </ul>
         </div>
@@ -30,25 +30,38 @@
     <div class="flex-grow-1 d-flex justify-content-center align-items-center">
         <div class="p-4 shadow w-100 row w-100 justify-content-center align-items-center" style="max-width: 900px;">
             <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center">
-                <img src="assets/imgs/CRUDimage.png" alt="Banner" class="img-fluid" style="max-height: 400px; max-width: 100%; object-fit: contain;">
+                <img src="assets/imgs/CRUDimage.png" alt="Banner" class="img-fluid"
+                    style="max-height: 400px; max-width: 100%; object-fit: contain;">
             </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center">
                 <div class="" style="max-width: 400px;">
                     <h3 class="text-center mb-4">Redefinir Senha</h3>
+
+                    <div class="alerta_erro">
+                        <div class="card_erro" id="cardErro">
+                            <span id="mensagem_erro"></span>
+                        </div>
+                    </div>
                     <form>
                         <div class="mb-3">
                             <p>Senha Antiga</p>
-                            <input id="ipt_senha_antiga" type="password" class="form-control" placeholder="Confirme o seu email">
+                            <input id="ipt_senhaAntiga" type="password" class="form-control"
+                                placeholder="Inseira senha antiga">
                         </div>
                         <div class="mb-3">
                             <p>Nova senha</p>
-                            <input id="ipt_senha" type="password" class="form-control" placeholder="Insira sua senha...">
+                            <input id="ipt_senhaNova" type="password" class="form-control"
+                                placeholder="Insira nova senha...">
+                                <div id="output_senhaVar"></div>
                         </div>
                         <div class="mb-3">
                             <p>Confirmar nova senha</p>
-                            <input id="ipt_senha_confirm" type="password" class="form-control" placeholder="Confirme sua senha...">
+                            <input id="ipt_senhaNovaConfirmar" type="password" class="form-control"
+                                placeholder="Confirme sua senha...">
+                                  <div id="output_confirmarSenhaVar"></div>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+                        <button id="alterar()" type="submit" class="btn btn-primary w-100">Salvar</button>
+
                     </form>
                 </div>
             </div>
@@ -58,5 +71,72 @@
 
 </html>
 <script>
+
+    function alterar() {
+        var senhaVar = ipt_senhaAntiga
+        var novaSenhaVar = ipt_senhaNova
+        var confirmarSenhaVar = ipt_senhaNovaConfirmar
+
+        if (senhaVar == "" && novaSenhaVar == "" && confirmarSenhaVar == "") {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "(Mensagem de erro para todos os campos em branco)";
+                return;
+        }
+
+    const numeros = /\d/;
+    const LetrasMinusculas = /[A-Z]/;
+    const caractresEspeciais = /[!@#%&*().;,/]/;
+
+    // Verifica se os campos estão preenchidos
+    if (emailVar == "" || senhaVar == ""|| nomeVar=="" || confirmacaoSenhaVar=="") {
+        alert("Preencha todos os campos!");
+        return;
+    }
+
+    //loop para percorrer as verificacoes da senhaVar
+    for (j = 1; j < 6; j++) {
+        if (j == 1) {
+            if (!caractresEspeciais.test(novaSenhaVar)) {
+                output_senhaVar.innerHTML += `A senha deve conter no mínimo 1 caracter especial<br>`
+                output_senhaVar.style.color = `red`
+                return;
+            }
+
+        }
     
+    else if (j == 2) {
+        if (novaSenhaVar.length < 8) {
+            output_senhaVar.innerHTML += `A senha deve conter no mínimo 8 caracteres<br>`
+            output_senhaVar.style.color = `red`
+            return;
+        }
+
+    }
+    else if (j == 3) {
+        if (!numeros.test(novaSenhaVar)) {
+            output_senhaVar.innerHTML += `A senha deve conter no mínimo 1 caracter numérico<br>`
+            output_senhaVar.style.color = `red`
+            return;
+        }
+
+    }
+    else if (j == 4) {
+        if (!LetrasMinusculas.test(novaSenhaVar)) {
+            output_senhaVar.innerHTML += `A senha deve conter no mínimo 1 letra maiúscula<br>`
+            output_senhaVar.style.color = `red`
+            return;
+        }
+        if(confirmarSenhaVar != novaSenhaVar){
+          output_confirmarSenhaVar += `Os campos devem ser iguais`
+          return;
+        }
+
+    }
+
+}
+
+
+    }
+
 </script>

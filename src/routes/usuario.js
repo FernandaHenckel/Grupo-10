@@ -12,7 +12,7 @@ router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
 
-router.post("/renovar", function (req, res){
+router.post("/renovar/:IdUsuario", function (req, res){
     usuarioController.renovar(req, res)
 })
 

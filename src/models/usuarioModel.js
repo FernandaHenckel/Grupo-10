@@ -18,8 +18,8 @@ function cadastrar(nome, email, dataNasc, senha) {
     return database.executar(instrucaoSql);
 }
 
-function renovar(senha) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function renovar():", senha);
+function renovar(IdUsuario,senha, novaSenha) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function renovar():",IdUsuario, novaSenha, senha);
     var instrucaoSql = `
        UPDATE usuarios SET senha = {NovaSenha} WHERE id_usuario = {ID_USUARIO};
     `;

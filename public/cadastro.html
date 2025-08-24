@@ -64,6 +64,7 @@
 
 </html>
 <script>
+
     function cadastrar(){
         var nomeVar = ipt_nome.value;
         var emailVar = ipt_email.value;
@@ -83,7 +84,8 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         emailCServer: emailCVar,
-        senhaServer: senhaVar
+        senhaServer: senhaVar,
+        senhaCServer: senhaCVar
       }),
     })
       .then(function (resposta) {

@@ -20,9 +20,11 @@ function autenticar(req, res) {
                         console.log(resultadoAutenticar);
 
                         res.json({
-                        id: resultadoAutenticar[0].id,
+                        id_usuario: resultadoAutenticar[0].id_usuario,
                         email: resultadoAutenticar[0].email,
-                        nome: resultadoAutenticar[0].nome
+                        nome: resultadoAutenticar[0].nome,
+                        senha: resultadoAutenticar[0].senha,
+                        administrador: resultadoAutenticar[0],administrador
                         });
 
                     } else if (resultadoAutenticar.length == 0) {
@@ -46,8 +48,8 @@ function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
-    var dataNasc = req.body.dataNascServer;
     var senha = req.body.senhaServer;
+    
 
     // Faça as validações dos valores
     if (nome == undefined) {

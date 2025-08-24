@@ -1,0 +1,41 @@
+.banner {
+    background: url(../assets/imgs/banner.png) no-repeat center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    position: relative;
+}
+
+.banner-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.banner-content {
+    position: relative;
+}
+
+.cards {
+    padding: 10rem 0 10rem 0;
+}
+
+.card {
+    margin: 10vh 3rem 10vh 3rem;
+
+    min-height: 30rem;
+    padding: 1rem;
+}
+
+
+.border-footer {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+    
+}

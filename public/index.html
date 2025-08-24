@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PayMectrics | página inicial</title>
-    <link rel="shortcut icon" type="imagex/png" href="assets/icons/logo Paymetrics.png">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index2.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>PayMectrics | Página Inicial</title>
+    <link rel="shortcut icon" type="imagex/png" href="assets/icons/logo Paymetrics.png">
 </head>
+
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
@@ -18,99 +20,113 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                      <a class="nav-link" href="">Sobre</a>                    </li>
+                    <a class="nav-link" href="">Sobre</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">Login</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <div class="container">
-        <div class="banner row">
-            <div class="title">
-                <p>Monitore suas vendas em tempo real</p>
+    <section class="banner d-flex align-items-center">
+        <div class="banner-overlay"></div>
+        <div class="container banner-content">
+            <div class="row">
+                <div class="col-lg-6 col-md-8">
+                    <h1 class="display-3 fw-bold">Monitore suas vendas em tempo real</h1>
+                    <p class="lead mt-3">Integre com sua loja e tenha visão completa das vendas e pagamentos em um só
+                        painel.</p>
+                    <a href="#servicos" class="btn btn-primary btn-lg mt-3">Saiba Mais</a>
+                </div>
             </div>
-            <div class="sub-title">
-                <p>Integre com sua loja e tenha visão completa das vendas e pagamentos em um só painel.</p>
+        </div>
+    </section>
+    <div class="container-fluid row d-flex flex-wrap column-gap-5 justify-content-center align-items-center cards">
+        <div class="card" style="width: 18rem;">
+            <img src="assets/icons/monitoramento.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Monitoramento em tempo real</h5>
+                <p class="card-text">Receba notificações instantâneas de cada transação.</p>
             </div>
-            <div class="saiba-mais">
-                <button>Saiba mais</button>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="assets/icons/metricas.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Relatórios detalhados</h5>
+                <p class="card-text">Entenda o desempenho das vendas por período, produto ou método de pagamento.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="assets/icons/vendas.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Vendas mais estáveis</h5>
+                <p class="card-text">Evite perdas de clientes por problemas com pagamentos.</p>
             </div>
         </div>
     </div>
-        <div class="conteiner-box">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="box1"><img src="assets/icons/monitoramento.png" alt="">
-                        <h2>Monitoramento em tempo real</h2>
-                        <p>Receba notificações instantâneas de cada transação.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box2"><img src="assets/icons/metricas.png" alt="">
-                        <h2>Relatórios detalhados</h2>
-                        <p>Entenda o desempenho das vendas por período, produto ou método de pagamento.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box3"><img src="assets/icons/vendas.png" alt="">
-                        <h2>Vendas mais estáveis</h2>
-                        <p>Evite perdas de clientes por problemas com pagamentos.</p>
-                    </div>
-                </div>
-            </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="container-fluid row">
+        <div class="col-lg-4">
+            <h2>Como funciona?</h2>
+            <p>Nosso sistema monitora em tempo real todo o hardware que processa pagamentos
+                em seu e-commerce, garantindo que terminais, servidores e dispositivos de rede
+                estejam sempre funcionando corretamente. Identificamos falhas, lentidão ou
+                instabilidades antes que afetem suas transações, enviando alertas imediatos e
+                oferecendo relatórios detalhados para que você possa agir rapidamente.</p>
         </div>
-        <div class="como-funciona">
-            <div class="text">
-                <h2>Como funciona?</h2>
-                <p>Nosso sistema monitora em tempo real todo o hardware que processa pagamentos 
-                    em seu e-commerce, garantindo que terminais, servidores e dispositivos de rede 
-                    estejam sempre funcionando corretamente. Identificamos falhas, lentidão ou 
-                    instabilidades antes que afetem suas transações, enviando alertas imediatos e 
-                    oferecendo relatórios detalhados para que você possa agir rapidamente.</p>
-                </div>
-                <div class="image">
-                    <img src="assets/imgs/como-funciona.png" alt="">
-                </div>
+        <div class="image col-lg-8">
+            <img src="assets/imgs/como-funciona.png" alt="">
         </div>
-        <div class="quem-somos">
-            <div class="image">
-                <div class="circle"></div>
-                <img src="assets/imgs/quem-somos.png" alt="">
-            </div>
-            <div class="text">
-                <h2>Quem somos?</h2>
-                <p>Somos especialistas em garantir que a sua operação de pagamentos nunca pare. Desde nossa fundação, 
-                    unimos experiência em tecnologia, infraestrutura e e-commerce para desenvolver soluções robustas 
-                    de monitoramento de hardware. Nosso time acompanha de perto cada servidor, terminal e dispositivo 
-                    que mantém seu negócio funcionando, identificando falhas antes que elas se tornem problemas. 
-                    Trabalhamos com empresas de todos os portes, sempre com o mesmo objetivo: manter suas vendas ativas, 
-                    seguras e sem interrupções.</p>
-            </div>
+    </div>
+    <div class="quem-somos">
+        <div class="image">
+            <div class="circle"></div>
+            <img src="assets/imgs/quem-somos.png" alt="">
         </div>
-        <div class="pontos">
-            <div class="ponto1"></div>
-            <div class="ponto2"></div>
-            <div class="ponto3"></div>
-            <div class="ponto4"></div>
+        <div class="text">
+            <h2>Quem somos?</h2>
+            <p>Somos especialistas em garantir que a sua operação de pagamentos nunca pare. Desde nossa fundação,
+                unimos experiência em tecnologia, infraestrutura e e-commerce para desenvolver soluções robustas
+                de monitoramento de hardware. Nosso time acompanha de perto cada servidor, terminal e dispositivo
+                que mantém seu negócio funcionando, identificando falhas antes que elas se tornem problemas.
+                Trabalhamos com empresas de todos os portes, sempre com o mesmo objetivo: manter suas vendas ativas,
+                seguras e sem interrupções.</p>
         </div>
-        <div class="footer">
-            <ul>
-                <li>
-                    <p>PayMetrics</p>
-                </li>
-                <li>
-                    <p>Telefone</p>
-                </li>
-                <li>
-                    <p>Email</p>
-                </li>
-                <li class="sobre">
-                    <a href="">Login</a>
-                    <a href="">Sobre</a>
-                </li>
-            </ul>
-            <p class="direitos">Todos os direitos reservados</p>
-        </div>
+    </div>
+    <div class="pontos">
+        <div class="ponto1"></div>
+        <div class="ponto2"></div>
+        <div class="ponto3"></div>
+        <div class="ponto4"></div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>
+                <p>PayMetrics</p>
+            </li>
+            <li>
+                <p>Telefone</p>
+            </li>
+            <li>
+                <p>Email</p>
+            </li>
+            <li class="sobre">
+                <a href="">Login</a>
+                <a href="">Sobre</a>
+            </li>
+        </ul>
+        <p class="direitos">Todos os direitos reservados</p>
+    </div>
 </body>
+
+
 </html>

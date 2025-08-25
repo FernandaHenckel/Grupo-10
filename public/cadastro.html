@@ -55,7 +55,7 @@
                             <input id="ipt_admin" type="checkbox" class="form-check-input">
                             <label class="form-check-label" for="ipt_admin">Usuário administrador</label>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+                        <button type="submit" class="btn btn-primary w-100" onclick="cadastrar(event)">Cadastrar</button>
                         <!-- <div id="div_mensagemTextoVazio"></div> -->
                     </form>
                 </div>
@@ -67,7 +67,10 @@
 </html>
 <script>
 
-    function cadastrar(){
+function cadastrar(event){
+    
+        event.preventDefault();
+
         var nomeVar = ipt_nome.value;
         var emailVar = (ipt_email.value).toLowerCase();
         var emailCVar = (ipt_email_confirm.value).toLowerCase();
@@ -77,11 +80,11 @@
         var id_usuario = sessionStorage.id_usuario;
         var fk_empresa = sessionStorage.fk_empresa;
 
-        var textoPreenchido = (nomeVar == '' | emailVar == '' || senhaVar == '' || confrimação_senha == '');
+        var textoPreenchido = (nomeVar == '' || emailVar == '' || senhaVar == '' || senhaCVar == '');
 
         while (textoPreenchido) {
-            div_mensagemTextoVazio.innerHTML = `Preencha todos os campos`;
-            return;
+            div_mensagemTextoVazio.innerHTML = 'Preencha todos os campos';
+            return(0);
         }
 
         const numeros = /\d/;
@@ -97,7 +100,6 @@
                     output_email.style.color = 'red';
                     return;
                 }
-
 
             }
             //Condicao 2
@@ -152,7 +154,7 @@
 
             }
         }
-
+    
         fetch("/usuarios/cadastrar", {
       method: "POST",
       headers: {

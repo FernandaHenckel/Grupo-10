@@ -43,6 +43,7 @@
                         <div class="mb-3">
                             <p class="my-0">Email</p>
                             <input id="ipt_email" type="email" class="form-control" placeholder="exemplo@email.com">
+                            <div id="output_email"></div>
                         </div>
                         <div class="mb-3">
                             <p class="my-0">Confirmar email</p>
@@ -51,10 +52,12 @@
                         <div class="mb-3">
                             <p class="my-0">Senha</p>
                             <input id="ipt_senha" type="password" class="form-control" placeholder="Insira sua senha...">
+                            <div id="output_senha"></div>
                         </div>
                         <div class="mb-3">
                             <p class="my-0">Confirmar senha</p>
                             <input id="ipt_senha_confirm" type="password" class="form-control" placeholder="Confirme sua senha...">
+                            <div id="output_confirmacao"></div>
                         </div>
                         <div class="form-check mb-3">
                             <input id="ipt_admin" type="checkbox" class="form-check-input">
@@ -81,6 +84,10 @@ function cadastrar(event){
         var emailCVar = (ipt_email_confirm.value).toLowerCase();
         var senhaVar = ipt_senha.value;
         var senhaCVar = ipt_senha_confirm.value;
+
+        output_email.innerHTML = "";
+        output_senha.innerHTML = "";
+        output_confirmacao.innerHTML = "";
 
         var id_usuario = sessionStorage.id_usuario;
         var fk_empresa = sessionStorage.fk_empresa;

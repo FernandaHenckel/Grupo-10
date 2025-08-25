@@ -4,42 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+=======
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+>>>>>>> 3569d37d30605ba17211e7a6f0f7ae642f000bdc
     <title>PayMetrics | Login</title>
     <link rel="shortcut icon" type="imagex/png" href="assets/icons/logo Paymetrics.png">
 </head>
-<body>
-    <div class="conteiner-fluid">
-        <div class="banner">
-            <ul id="nav">
-                <li>
-                    <p>PayMetrics</p>
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-sm">
+        <div class="conteiner-fluid">
+            <ul id="navbar-nav">
+                <li class="nav-link">
+                    <a class="navbar-brand">PayMetrics</a>
                 </li>
-                <li>
-                    <a href="index.html">Home</a>
+                <li class="nav-link">
+                <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li>
-                    <a href="">Sobre</a>
+                <li class="nav-link">
+                    <a class="nav-link" href="">Sobre</a>
                 </li>
-                <li>
-                    <a href="">Login</a>
+                <li class="nav-link">
+                    <a class="nav-link" href="">Login</a>
                 </li>
             </ul>
         </div>
-        <div class="conteiner-box">
-            <div class="box">
-                <p>Login</p>
-                <div class="campos">
-                    <div class="col-6">
-                        <input id="ipt_email" type="email" placeholder="Insira seu email...">
-                    </div>
-                    <div class="col-6">
-                        <input id="ipt_senha" type="password" placeholder="Insira sua senha...">
-                    </div>
+    </nav>
+        <div class="flex-grow-1 d-flex justify-content-center align-items-center">
+            <div class="p-4 shadow w-100 row w-1000 justify-content-center align-items-center">
+                <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center">
+                    <img src="" alt="">
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center"></div>
+                <div class="campos" style="max-width: 400px;">
+                    <h3 class="text-center mb-4">Login</h3>
+                    <form>
+                        <div class="md-3">
+                            <p></p>
+                            <input id="ipt_email" type="email" class="form-control" placeholder="Insira seu email...">
+                        </div>
+                        <div class="md-3">
+                            <input id="ipt_senha" type="password" class="form-control" placeholder="Insira sua senha...">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
                 </div>
             </div>
-            <div class="box2"></div>
         </div>
     </div>
 </body>

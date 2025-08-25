@@ -27,6 +27,7 @@ app.use(cors());
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
 app.use("/novasenha", novasenhaRouter);
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));
 
 
 app.listen(PORTA_APP, function () {

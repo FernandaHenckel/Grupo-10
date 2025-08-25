@@ -63,3 +63,55 @@
 </body>
 
 </html>
+<script>
+
+    function cadastrar(){
+        var nomeVar = ipt_nome.value;
+        var emailVar = ipt_email.value;
+        var emailCVar = ipt_email_confirm.value;
+        var senhaVar = ipt_senha.value;
+        var senhaCVar = ipt_senha_confirm.value;
+
+        var id_usuario = sessionStorage.id_usuario;
+        var fk_empresa = sessionStorage.fk_empresa;
+
+        fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        emailCServer: emailCVar,
+        senhaServer: senhaVar,
+        senhaCServer: senhaCVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cadastroResposta.innerHTML =
+            `Cadastro realizado com sucesso!`;
+
+          limparFormulario();
+          finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  function sair() {
+    sessionStorage.clear();
+    window.location = "../index.html";
+  }
+    
+</script>

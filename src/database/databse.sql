@@ -35,7 +35,7 @@ references endereco(id_endereco)
 );
 
 create table usuarios (
-id_usuario int auto_increment,
+id_usuario int not null auto_increment,
 nome varchar(200) not null,
 senha varchar(200) not null,
 email varchar(200) not null,
